@@ -3,7 +3,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: "REAPangea-Medium", "system-ui", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /* font-family: 'Times New Roman', Times, serif; */
     font-size: 16px;
 }
 
@@ -11,12 +10,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: "60%";
+    width: 60%;
+    /* Without quotes */
+    margin: auto;
+    /* Center the container */
 }
 
 .category {
     display: flex;
-    width: 50em;
+    width: 100%;
+    /* Adjust the width as needed */
     align-items: center;
     margin: 1% 0;
 }
@@ -25,37 +28,45 @@ body {
     margin-top: 20px;
 }
 
-.text {
-    font-size: medium;
-    font-weight: 600;
-    margin-left: 2%;
-}
-
-
+.text,
 .text-bonus {
     font-size: medium;
     margin-left: 2%;
 }
 
 .container {
-    width: 50em;
+    width: 100%;
+    /* Adjust the width as needed */
+    max-width: 50em;
+    /* Set a maximum width for larger screens */
     margin-top: 4%;
     line-height: 20px;
 }
 
-.first-para {
-    line-height: 20px;
-    font-stretch: expanded;
-}
-
-.second-para {
-    line-height: 20px;
-    margin-top: 3%;
-    font-stretch: expanded;
-}
-
+.first-para,
+.second-para,
 .third-para {
-    margin-top: 3%;
-    font-stretch: expanded;
     line-height: 20px;
+    margin-top: 3%;
+    font-weight: 300;
+    /* Adjust the value based on your preference */
+}
+
+/* Media Query for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+    .main {
+        width: 80%;
+        /* Adjust as needed */
+    }
+
+    .category {
+        width: 100%;
+        margin: 10px 0
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        /* Reset max-width for smaller screens */
+    }
 }
